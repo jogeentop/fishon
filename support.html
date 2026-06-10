@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>小猫看漂 - 技术支持</title>
+    <style>
+      :root {
+        --bg: #0b1220;
+        --card: rgba(255, 255, 255, 0.06);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.68);
+        --border: rgba(255, 255, 255, 0.12);
+        --accent: #62e6ff;
+        --accent2: #8b5cf6;
+        --shadow: rgba(0, 0, 0, 0.25);
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --card: #ffffff;
+          --text: rgba(10, 14, 24, 0.92);
+          --muted: rgba(10, 14, 24, 0.62);
+          --border: rgba(10, 14, 24, 0.12);
+          --accent: #0ea5e9;
+          --accent2: #7c3aed;
+          --shadow: rgba(10, 14, 24, 0.08);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Hiragino Sans GB",
+          "Microsoft YaHei", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(1100px 550px at 15% -10%, rgba(98, 230, 255, 0.28), transparent 60%),
+          radial-gradient(900px 500px at 85% 0%, rgba(139, 92, 246, 0.22), transparent 55%),
+          linear-gradient(180deg, var(--bg), var(--bg));
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        width: min(980px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 28px 0 56px;
+      }
+
+      header {
+        display: grid;
+        gap: 10px;
+        padding: 18px 0 8px;
+      }
+
+      .brand {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 10px;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-size: clamp(22px, 3.2vw, 32px);
+        letter-spacing: 0.2px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--card) 80%, transparent);
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .sub {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 14px;
+        margin-top: 16px;
+      }
+
+      @media (min-width: 860px) {
+        .grid {
+          grid-template-columns: 1.1fr 0.9fr;
+        }
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--card);
+        box-shadow: 0 10px 32px var(--shadow);
+        overflow: hidden;
+      }
+
+      .card .content {
+        padding: 16px 16px 14px;
+      }
+
+      @media (min-width: 640px) {
+        .card .content {
+          padding: 18px 18px 16px;
+        }
+      }
+
+      h2 {
+        margin: 0 0 8px;
+        font-size: 17px;
+        letter-spacing: 0.2px;
+      }
+
+      p {
+        margin: 0 0 10px;
+        color: var(--muted);
+      }
+
+      ul {
+        margin: 8px 0 0 18px;
+        padding: 0;
+        color: var(--muted);
+      }
+
+      li {
+        margin: 6px 0;
+      }
+
+      .meta {
+        display: grid;
+        gap: 10px;
+      }
+
+      .kv {
+        display: grid;
+        gap: 6px;
+        padding: 12px 14px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: color-mix(in srgb, var(--card) 88%, transparent);
+      }
+
+      .k {
+        font-size: 12px;
+        color: var(--muted);
+        letter-spacing: 0.3px;
+      }
+
+      .v {
+        font-size: 14px;
+        color: var(--text);
+        word-break: break-word;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 14px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--accent2) 20%, transparent));
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .btn:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--accent) 40%, transparent);
+        outline-offset: 2px;
+      }
+
+      footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .note {
+        padding: 12px 14px;
+        border-left: 3px solid color-mix(in srgb, var(--accent) 65%, transparent);
+        border-radius: 12px;
+        background: color-mix(in srgb, var(--card) 88%, transparent);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <h1>小猫看漂 · 技术支持</h1>
+          <span class="badge">iOS · 离线守漂 · 相机识别</span>
+        </div>
+        <p class="sub">用于 App Store 审核与用户支持：常见问题、权限说明、联系方式与购买支持。</p>
+      </header>
+
+      <main class="grid">
+        <section class="card" aria-label="常见问题">
+          <div class="content">
+            <h2>常见问题（FAQ）</h2>
+
+            <p><strong>1）为什么识别不到浮漂？</strong></p>
+            <ul>
+              <li>确保手机稳定固定，对准浮漂区域，尽量减少抖动。</li>
+              <li>光线不足时建议开启“夜钓”预设，并避免强反光或背光。</li>
+              <li>浮漂在画面中尽量占据一定像素（更近一些或适当使用变焦）。</li>
+              <li>水面浪大、杂波多时，适当降低灵敏度以减少误报。</li>
+            </ul>
+
+            <p style="margin-top: 12px"><strong>2）告警太频繁/误报多怎么办？</strong></p>
+            <ul>
+              <li>在设置中将灵敏度调整为“正常”或“钓顿”。</li>
+              <li>切换到更合适的场景预设（标准/夜钓）。</li>
+              <li>尽量避免画面中出现大幅晃动的背景（树枝、反光水纹、路灯闪烁）。</li>
+            </ul>
+
+            <p style="margin-top: 12px"><strong>3）为什么没有声音/震动？</strong></p>
+            <ul>
+              <li>检查应用内提醒开关是否已开启，并调整提醒强度与持续时间。</li>
+              <li>检查系统静音开关、专注模式、音量与通知权限。</li>
+              <li>部分机型/系统设置可能影响震动反馈，请确认系统触感设置已开启。</li>
+            </ul>
+
+            <p style="margin-top: 12px"><strong>4）高光片段保存在哪里？</strong></p>
+            <ul>
+              <li>默认保存在应用内的“高光”列表中，可回放与删除。</li>
+              <li>仅当你在设置中开启“同步到相册”，应用才会将高光视频写入系统相册。</li>
+            </ul>
+
+            <p style="margin-top: 12px"><strong>5）如何恢复购买/试用？</strong></p>
+            <ul>
+              <li>在购买页面点击“恢复购买”。</li>
+              <li>确保使用与购买时相同的 Apple ID，并保持网络可用以完成校验。</li>
+            </ul>
+          </div>
+        </section>
+
+        <aside class="card" aria-label="联系与信息">
+          <div class="content meta">
+            <div class="kv">
+              <div class="k">应用名称</div>
+              <div class="v">小猫看漂（FishOn）</div>
+            </div>
+
+            <div class="kv">
+              <div class="k">支持邮箱</div>
+              <div class="v"><a href="mailto:support@example.com">support@example.com</a></div>
+            </div>
+
+            <div class="kv">
+              <div class="k">反馈建议</div>
+              <div class="v">请在邮件中附上：机型、iOS 版本、问题描述、可复现步骤与截图/录屏。</div>
+            </div>
+
+            <a class="btn" href="mailto:support@example.com?subject=%E5%B0%8F%E7%8C%AB%E7%9C%8B%E6%BC%82%20-%20%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81&body=%E8%AF%B7%E6%8F%90%E4%BE%9B%EF%BC%9A%0A1%EF%BC%89%E6%9C%BA%E5%9E%8B%EF%BC%9A%0A2%EF%BC%89iOS%20%E7%89%88%E6%9C%AC%EF%BC%9A%0A3%EF%BC%89%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%EF%BC%9A%0A4%EF%BC%89%E5%8F%AF%E5%A4%8D%E7%8E%B0%E6%AD%A5%E9%AA%A4%EF%BC%9A%0A5%EF%BC%89%E6%88%AA%E5%9B%BE%E6%88%96%E5%BD%95%E5%B1%8F%EF%BC%9A">一键发送支持邮件</a>
+
+            <div class="note" role="note" aria-label="权限说明">
+              <div style="font-weight: 700; margin-bottom: 6px">权限说明（审核友好）</div>
+              <div style="color: var(--muted); font-size: 14px">
+                相机权限用于实时取景与离线浮漂监测。照片权限为“仅添加”，仅在你开启“同步到相册”后，用于将告警高光视频写入系统相册；未开启时不会写入相册。
+              </div>
+            </div>
+
+            <div class="kv">
+              <div class="k">隐私说明</div>
+              <div class="v">应用核心监测流程可在离线环境下完成，不强制登录。</div>
+            </div>
+
+            <div class="kv">
+              <div class="k">更新日期</div>
+              <div class="v">2026-06-10</div>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <div>© 2026 Jogeen. 如需替换支持邮箱/版权主体，请编辑本页面中的 <strong>jogeen@qq.com</strong> 与版权信息。</div>
+      </footer>
+    </div>
+  </body>
+</html>
