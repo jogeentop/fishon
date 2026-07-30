@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐私政策 - 小猫看漂 (FishOn)</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --text-soft: #6e6e73;
+      --accent: #0a84ff;
+      --border: #e5e5ea;
+      --warn: #ff9f0a;
+      --ok: #30d158;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --card: #1c1c1e;
+        --text: #f5f5f7;
+        --text-soft: #a1a1a6;
+        --accent: #0a84ff;
+        --border: #2c2c2e;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .hero {
+      padding: 28px 28px;
+      background: linear-gradient(135deg, #6ef27a 0%, #3487ff 100%);
+      border-radius: 20px;
+      color: #fff;
+      margin-bottom: 32px;
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .hero p { margin: 0; opacity: 0.95; font-size: 15px; }
+    .meta {
+      margin-top: 14px;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    section h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    section h3 {
+      margin: 18px 0 8px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    p { margin: 0 0 12px; color: var(--text); }
+    .soft { color: var(--text-soft); }
+    ul { margin: 6px 0 12px 20px; padding: 0; }
+    li { margin-bottom: 6px; }
+    .tag {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .tag-ok { background: rgba(48,209,88,0.18); color: #1aa43a; }
+    .tag-warn { background: rgba(255,159,10,0.18); color: #c97400; }
+    .kv {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 10px 20px;
+      font-size: 15px;
+      margin-top: 4px;
+    }
+    .kv div:nth-child(odd) { color: var(--text-soft); font-weight: 500; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .email {
+      font-family: "SF Mono", Monaco, Menlo, Consolas, monospace;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 6px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+    @media (max-width: 560px) {
+      .wrap { padding: 20px 16px 60px; }
+      .hero { padding: 22px 20px; }
+      .hero h1 { font-size: 22px; }
+      section { padding: 18px 18px; }
+      .kv { grid-template-columns: 1fr; gap: 2px; }
+      .kv div:nth-child(odd) { margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="hero">
+      <h1>小猫看漂 (FishOn) 隐私政策</h1>
+      <p>我们非常重视你的隐私。本政策说明应用会请求哪些权限、如何保存数据、以及我们<strong>不会做</strong>的事情。</p>
+      <div class="meta">生效日期：2026 年 7 月 30 日 &nbsp;|&nbsp; 适用版本：1.0</div>
+    </div>
+
+    <section>
+      <h2>一、总览</h2>
+      <p><span class="tag tag-ok">离线优先</span> 小猫看漂的核心功能（相机预览、浮漂识别与跟踪、中鱼风险提示、声音/震动/闪屏提醒）均可在<strong>完全离线</strong>环境下完成。</p>
+      <p><span class="tag tag-ok">不收集不登录</span> 本应用<strong>不要求注册或登录</strong>，不会主动上传任何视频画面、音频、位置或个人身份信息到我们的服务器。</p>
+      <p><span class="tag tag-warn">按需授权</span> 所有系统权限（相机、相册）均为「按需申请」，你可在 iOS 的「设置 → 小猫看漂」中随时关闭。</p>
+    </section>
+
+    <section>
+      <h2>二、我们申请的系统权限及用途</h2>
+
+      <h3>📷 相机权限（必需）</h3>
+      <ul>
+        <li><strong>用途：</strong>开启后置摄像头，用于实时取景、浮漂自动识别与跟踪、中鱼风险判断。</li>
+        <li><strong>处理位置：</strong>所有图像识别与风险计算均在<strong>设备本地</strong>完成（使用 Apple 的 CoreML / Vision 框架），不会离开你的手机。</li>
+        <li><strong>拒绝后果：</strong>若不授权相机，应用无法进入主流程，将一直提示授权。</li>
+      </ul>
+
+      <h3>🖼️ 照片（仅添加，可选）</h3>
+      <ul>
+        <li><strong>用途：</strong>仅当你在设置中主动开启「<strong>同步到系统相册</strong>」开关后，应用才会在告警触发时，把 Pro 高光视频片段写入你的系统相册。</li>
+        <li><strong>默认状态：</strong><span class="tag tag-ok">默认关闭</span> 首次进入应用时不会申请相册权限。</li>
+        <li><strong>未授权时：</strong>所有高光视频仍会保存在应用<strong>内部沙盒</strong>，你仍可在 App 内的「高光」列表查看、回放、删除。</li>
+      </ul>
+
+      <h3>🔔 本地提示（声音、震动、屏幕闪烁）</h3>
+      <p>应用会在疑似中鱼时使用系统震动（Haptic）和扬声器播放提示音、以及使用闪光灯 / 屏幕高亮进行视觉提醒。<strong>这些提示完全在本地生成，不会发送任何通知到远程服务器。</strong></p>
+    </section>
+
+    <section>
+      <h2>三、本地存储的数据</h2>
+      <p>以下内容<strong>仅保存在你的设备上</strong>，卸载应用会被一并删除：</p>
+
+      <div class="kv">
+        <div>App 设置</div>
+        <div>场景预设（标准 / 夜钓）、灵敏度档位、各提醒开关与强度、变焦档位、高光录制是否开启、是否同步相册等。保存在 <code>UserDefaults</code> 中。</div>
+
+        <div>内购权益缓存</div>
+        <div>首次安装日期（用于计算 7 天试用）、从 App Store 获取到的权益信息缓存。用于离线状态下也能正确解锁 Pro 功能。</div>
+
+        <div>高光视频文件</div>
+        <div>Pro 用户在告警触发后，应用自动保存的前后关键片段，最长保留 7 天，保存在 App 沙盒 Documents 目录。你可随时在「高光」列表中删除；若开启了同步，则对应片段也会出现在系统相册。</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>四、我们不会收集 / 不会做的事</h2>
+      <ul>
+        <li>❌ 不会收集你的<strong>姓名、手机号、邮箱、位置、通讯录、相册内容</strong>等任何个人身份信息。</li>
+        <li>❌ 不会把<strong>任何相机画面、浮漂识别过程、高光视频</strong>上传到云端。</li>
+        <li>❌ 不会接入第三方统计（如友盟、Firebase Analytics）或广告 SDK。</li>
+        <li>❌ 不会在后台私自开启相机或录音。相机仅在应用处于前台且你明确进入「相机预览 / 监测」时运行；退出界面会立即停止会话。</li>
+        <li>❌ 不会读取你的剪贴板、健康数据、iCloud 内容或其他 App 的数据。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>五、应用内购买与第三方服务</h2>
+      <h3>💳 Apple 内购（StoreKit / App Store）</h3>
+      <p>小猫看漂通过 Apple 的 StoreKit 框架提供 Pro 订阅与购买，包括：首次 7 天试用、月度 / 年度订阅、买断、以及「恢复购买」。</p>
+      <ul>
+        <li>所有交易、支付信息、扣费、订单号均由 Apple 处理并受其条款约束，<strong>我们不会接触也不会存储你的信用卡号、账单地址或支付密码</strong>。</li>
+        <li>应用只会保存 Apple 返回的<strong>「是否拥有 Pro 权益」</strong>这一状态，用于解锁 15x 高倍变焦与高光录制功能。</li>
+      </ul>
+
+      <h3>🌐 唯一的网络交互</h3>
+      <p>除 Apple StoreKit 在需要时与 App Store 服务器通信以验证购买、刷新权益、显示价格外，应用自身<strong>不包含任何其它联网请求</strong>。</p>
+    </section>
+
+    <section>
+      <h2>六、儿童隐私</h2>
+      <p>小猫看漂<strong>不面向 13 周岁以下儿童</strong>提供服务。我们不会明知故犯地收集儿童个人信息；由于我们本身不收集个人信息，也就不存在儿童数据的专门维护通道。</p>
+      <p>如果你是家长或监护人，认为儿童可能通过本应用上传了相关内容，可通过下方邮箱与我们联系。</p>
+    </section>
+
+    <section>
+      <h2>七、数据控制：你的权利</h2>
+      <ul>
+        <li><strong>撤回权限：</strong>iOS「设置 → 小猫看漂」可随时关闭相机、相册权限。关闭后，对应功能不可用，但不会删除已在 App 内保存的高光与设置。</li>
+        <li><strong>删除本地数据：</strong>在应用设置点击「重置」可清空所有本地设置；在「高光」列表中可单独或批量删除片段。</li>
+        <li><strong>一次性清空所有数据：</strong>卸载应用即可删除 App 沙盒中的全部数据（包括设置、权益缓存、高光文件）。已同步到系统相册的视频需要你在「照片」App 中自行删除。</li>
+      </ul>
+      <p>由于我们<strong>不在服务器上持有任何你的数据</strong>，因此没有「下载我的数据」或「远程删除」的额外流程 —— 你在本地所做的操作就是最终结果。</p>
+    </section>
+
+    <section>
+      <h2>八、本政策的更新</h2>
+      <p>若将来增加新的可选功能（例如新增云同步、第三方登录等，目前没有）导致隐私实践发生变化，我们会：</p>
+      <ul>
+        <li>通过新版本 App 内弹窗或首屏提示告知变更；</li>
+        <li>在本页面更新「生效日期」并说明变更点；</li>
+        <li>对于新增的数据收集，会<strong>重新取得你的明确同意</strong>后再执行。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>九、联系我们</h2>
+      <p>如对本隐私政策有任何疑问、异议、或希望删除 / 查询你的相关信息（尽管我们没有在服务器持有任何数据），请通过以下邮箱与我们联系：</p>
+      <div class="email">jogeen.top@gmail.com</div>
+      <p class="soft" style="margin-top:14px;">我们通常会在 5 个工作日内回复。</p>
+    </section>
+
+    <div class="footer">
+      © 2026 Jogeen &nbsp;·&nbsp; 小猫看漂 FishOn &nbsp;·&nbsp; 本隐私政策最后更新于 2026-07-30
+    </div>
+
+  </div>
+</body>
+</html>
